@@ -8,7 +8,11 @@ public class RpcRequest implements Serializable {
 
 	private String methodName;
 
+	private String version;
+
 	private Object[] params;
+
+	private Class<?>[] paramTypes;
 
 	public String getClassName() {
 		return className;
@@ -32,5 +36,21 @@ public class RpcRequest implements Serializable {
 
 	public void setParams(Object[] params) {
 		this.params = params;
+	}
+
+	public String getVersion() {
+		return version;
+	}
+
+	public void setVersion(String version) {
+		this.version = version;
+	}
+
+	public Class<?>[] getParamTypes() {
+		return paramTypes;
+	}
+
+	public void setParamTypes(Class<?>[] paramTypes) {
+		this.paramTypes = paramTypes;
 	}
 }
